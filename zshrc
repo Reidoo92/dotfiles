@@ -1,5 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
 
+# Démarrer l'agent SSH et ajouter la clé
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
 
@@ -70,3 +74,4 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+sudo /etc/init.d/postgresql start
